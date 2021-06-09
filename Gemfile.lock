@@ -57,6 +57,7 @@ GEM
       sinatra (= 2.1.0)
       tilt (~> 2.0)
     tilt (2.0.10)
+    webrick (1.7.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -70,6 +71,7 @@ DEPENDENCIES
   selenium-webdriver
   sinatra
   sinatra-contrib
+  webrick
 
 BUNDLED WITH
    2.2.19

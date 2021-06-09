@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 
+gem 'capybara'
+gem 'rspec'
+gem 'selenium-webdriver'
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'rspec'
-gem 'capybara'
-gem 'selenium-webdriver'
+gem 'webrick'
