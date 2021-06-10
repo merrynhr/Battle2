@@ -1,5 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require 'player'
+$variable = {}
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -12,20 +14,20 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:p1_name] = params[:p1_name]
-    session[:p2_name] = params[:p2_name]
+    $variable[:p1_name] = Player.new(params[:p1_name]).name
+    $variable[:p2_name] = Player.new(params[:p2_name]).name
     redirect '/play'
   end
 
   get '/play' do
-    @p1_name = session[:p1_name]
-    @p2_name = session[:p2_name]
+    @p1_name = $variable[:p1_name]
+    @p2_name = $variable[:p2_name]
     erb(:play)
   end
 
   post '/attack' do
-    @p1_name = session[:p1_name]
-    @p2_name = session[:p2_name]
+    @p1_name = $variable[:p1_name]
+    @p2_name = $variable[:p2_name]
     erb(:attack)
   end
 
