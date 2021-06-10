@@ -1,3 +1,20 @@
 <h1> <%= @p1_name %> vs. <%= @p2_name %> </h1>
 
 <h1> <%= @p2_name%>: 50HP</h1>
+
+
+<form action="/attack"> <button type='button'> Attack </button> </form>
+
+<%# <form action='/names' method='post'>
+  <label for='p1_name'>
+    Player 1 name:
+    <input type='text' name='p1_name'><br>
+  </label>
+  <label for='p2_name'>
+    Player 2 name:
+    <input type='text' name='p2_name'><br>
+  </label>
+  <input type='button' name='Submit'>
+</form> %>
+
+<h1> <%= @p1_name %> attacked <%= @p2_name %> </h1>
