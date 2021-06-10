@@ -6,7 +6,7 @@ feature 'describe battle' do
     fill_in('p2_name', with: 'Joomin')
     click_button('Submit')
 
-    save_and_open_page
+    #save_and_open_page
 
     expect(page).to have_content('Cynthia vs. Joomin')
   end
