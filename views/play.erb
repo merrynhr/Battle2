@@ -3,7 +3,9 @@
 <h1> <%= @p2_name%>: 50HP</h1>
 
 
-<form action="/attack"> <button type='button'> Attack </button> </form>
+<form action="/attack" method='post'>
+  <input type='submit' name='Attack'>
+</form>
 
 <%# <form action='/names' method='post'>
   <label for='p1_name'>
@@ -17,4 +19,3 @@
   <input type='button' name='Submit'>
 </form> %>
 
-<h1> <%= @p1_name %> attacked <%= @p2_name %> </h1>
